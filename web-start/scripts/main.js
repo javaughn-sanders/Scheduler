@@ -17,13 +17,6 @@
 
 // Set the configuration for your app
 // TODO: Replace with your project's config object
-  var config = {
-  apiKey: "apiKey",
-  authDomain: "projectId.firebaseapp.com",
-  databaseURL: "https://databaseName.firebaseio.com",
-  storageBucket: "bucket.appspot.com"
-  };
-  firebase.initializeApp(config);
 
   // Get a reference to the database service
   var database = firebase.database();
@@ -70,6 +63,15 @@ function isUserSignedIn() {
 
 // Loads chat messages history and listens for upcoming ones.
 function loadMessages() {
+  // Loads the last 12 messages and listen for new ones.
+  var callback = function(snap) {
+    var data = snap.val();
+    displayMessage(snap.key, data.name, data.text, data.profilePicUrl, data.imageUrl);
+  };
+
+  firebase.database().ref('/messages/').limitToLast(12).on('child_added', callback);
+  firebase.database().ref('/messages/').limitToLast(12).on('child_changed', callback);
+
   // TODO 7: Load and listens for new messages.
 }
 

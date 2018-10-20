@@ -1,5 +1,6 @@
 {
   "projects": {
-    "prod": "scheduler-hu"
+    "prod": "scheduler-hu",
+    "Prod": "scheduler-hu"
   }
 }
