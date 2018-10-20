@@ -27,3 +27,32 @@
 [debug] [2018-10-20T20:46:16.024Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-20T21:08:12.120Z] ----------------------------------------------------------------------
+[debug] [2018-10-20T21:08:12.123Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2018-10-20T21:08:12.123Z] CLI Version:   5.1.1
+[debug] [2018-10-20T21:08:12.123Z] Platform:      darwin
+[debug] [2018-10-20T21:08:12.123Z] Node Version:  v8.12.0
+[debug] [2018-10-20T21:08:12.124Z] Time:          Sat Oct 20 2018 17:08:12 GMT-0400 (EDT)
+[debug] [2018-10-20T21:08:12.124Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-20T21:08:12.138Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-20T21:08:12.138Z] > authorizing via signed-in user
+[debug] [2018-10-20T21:08:12.138Z] [iam] checking project scheduler-hu for permissions ["firebase.projects.get"]
+[debug] [2018-10-20T21:08:12.140Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-20T21:08:12.140Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-10-20T21:08:12.315Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T21:08:12.325Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu:testIamPermissions  
+
+[debug] [2018-10-20T21:08:12.544Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T21:08:12.545Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu  
+ 
+[debug] [2018-10-20T21:08:12.766Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/aarongarner/Documents/GitHub/Scheduler/web-start'...
+[info] 
+[debug] [2018-10-20T21:08:12.768Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-20T21:08:13.088Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] ✔  hosting: Local server: http://localhost:5000
