@@ -32,7 +32,7 @@
 //Gets input from the user about the assignment details
 function Get_User_Input(){
   // link to html with id
-  var type = //id;
+  var type = document.getElementByID//id;
   var difficulty = //id;
   var daysLeft = //id;
 }
@@ -72,8 +72,6 @@ function getProfilePicUrl() {
 // Returns the signed-in user's display name.
 function getUserName() {
 <<<<<<< HEAD
-  return firebase.auth().currentUser.displayName;  // TODO 5: Return the user's display name.
-=======
 <<<<<<< HEAD
   return firebase.auth().currentUser.displayName;
 =======
@@ -82,8 +80,10 @@ function getUserName() {
   return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
 >>>>>>> parent of 16cbf95... fixed
 >>>>>>> Nelsons
+=======
+  return firebase.auth().currentUser.displayName;
+>>>>>>> Frontend_team
   // TODO 5: Return the user's display name.
->>>>>>> master
 }
 
 // Returns true if a user is signed-in.
@@ -277,13 +277,7 @@ function checkSetup() {
 checkSetup();
 
 // Shortcuts to DOM Elements.
-var messageListElement = document.getElementById('messages');
-var messageFormElement = document.getElementById('message-form');
-var messageInputElement = document.getElementById('message');
-var submitButtonElement = document.getElementById('submit');
-var imageButtonElement = document.getElementById('submitImage');
-var imageFormElement = document.getElementById('image-form');
-var mediaCaptureElement = document.getElementById('mediaCapture');
+
 var userPicElement = document.getElementById('user-pic');
 var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
