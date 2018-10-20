@@ -15,6 +15,21 @@
  */
 'use strict';
 
+//Gets input from the user about the assignment details
+function Get_User_Input(){
+  // link to html with id
+  var type = //id;
+  var difficulty = //id;
+  var daysLeft = //id;
+}
+
+//Takes in variables from Get_User_Input
+function calculateImportance(type, difficulty, daysLeft){
+  Get_User_Input();
+  var importance_value = (type + difficulty) / daysLeft; 
+  return importance_value;
+}
+
 // Signs-in Friendly Chat.
 function signIn() {
   // TODO 1: Sign in Firebase with credential from the Google user.
