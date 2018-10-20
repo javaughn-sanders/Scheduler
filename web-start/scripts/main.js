@@ -24,9 +24,10 @@
 //Gets input from the user about the assignment details
 function Get_User_Input(){
   // link to html with id
-  var type = document.getElementByID//id;
-  var difficulty = //id;
-  var daysLeft = //id;
+  //var type = document.getElementByID
+  //var difficulty = //id;
+  //var daysLeft = //id;
+  return;
 }
 
 //Takes in variables from Get_User_Input
