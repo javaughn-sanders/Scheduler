@@ -13,6 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+
+// Set the configuration for your app
+// TODO: Replace with your project's config object
+  var config = {
+  apiKey: "apiKey",
+  authDomain: "projectId.firebaseapp.com",
+  databaseURL: "https://databaseName.firebaseio.com",
+  storageBucket: "bucket.appspot.com"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
 'use strict';
 
 // Signs-in Friendly Chat.
@@ -42,7 +56,14 @@ function getProfilePicUrl() {
 
 // Returns the signed-in user's display name.
 function getUserName() {
+<<<<<<< HEAD
   return firebase.auth().currentUser.displayName;
+=======
+<<<<<<< HEAD
+=======
+  return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
+>>>>>>> parent of 16cbf95... fixed
+>>>>>>> Nelsons
   // TODO 5: Return the user's display name.
 }
 
