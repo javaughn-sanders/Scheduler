@@ -18,30 +18,37 @@
 // Signs-in Friendly Chat.
 function signIn() {
   // TODO 1: Sign in Firebase with credential from the Google user.
+  var provider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(provider);
 }
 
 // Signs-out of Friendly Chat.
 function signOut() {
+   firebase.auth().signOut();
   // TODO 2: Sign out of Firebase.
 }
 
 // Initiate firebase auth.
 function initFirebaseAuth() {
+  firebase.auth().onAuthStateChanged(authStateObserver);
   // TODO 3: Initialize Firebase.
 }
 
 // Returns the signed-in user's profile Pic URL.
 function getProfilePicUrl() {
+  return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
   // TODO 4: Return the user's profile pic URL.
 }
 
 // Returns the signed-in user's display name.
 function getUserName() {
+  return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
   // TODO 5: Return the user's display name.
 }
 
 // Returns true if a user is signed-in.
 function isUserSignedIn() {
+  return !!firebase.auth().currentUser;
   // TODO 6: Return true if a user is signed-in.
 }
 
