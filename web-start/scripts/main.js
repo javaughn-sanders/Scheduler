@@ -42,7 +42,7 @@ function getProfilePicUrl() {
 
 // Returns the signed-in user's display name.
 function getUserName() {
-  return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
+  return firebase.auth().currentUser.displayName;
   // TODO 5: Return the user's display name.
 }
 
