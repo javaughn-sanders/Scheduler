@@ -51,6 +51,10 @@ function getProfilePicUrl() {
 
 // Returns the signed-in user's display name.
 function getUserName() {
+<<<<<<< HEAD
+=======
+  return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
+>>>>>>> parent of 16cbf95... fixed
   // TODO 5: Return the user's display name.
 }
 
