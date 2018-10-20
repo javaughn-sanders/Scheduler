@@ -17,13 +17,6 @@
 
 // Set the configuration for your app
 // TODO: Replace with your project's config object
-  var config = {
-  apiKey: "apiKey",
-  authDomain: "projectId.firebaseapp.com",
-  databaseURL: "https://databaseName.firebaseio.com",
-  storageBucket: "bucket.appspot.com"
-  };
-  firebase.initializeApp(config);
 
   // Get a reference to the database service
   var database = firebase.database();
@@ -56,18 +49,9 @@ function getProfilePicUrl() {
 
 // Returns the signed-in user's display name.
 function getUserName() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return firebase.auth().currentUser.displayName;
-=======
-<<<<<<< HEAD
-=======
+
   return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
->>>>>>> parent of 16cbf95... fixed
->>>>>>> Nelsons
-=======
-  return firebase.auth().currentUser.displayName;
->>>>>>> Frontend_team
   // TODO 5: Return the user's display name.
 }
 
@@ -79,6 +63,15 @@ function isUserSignedIn() {
 
 // Loads chat messages history and listens for upcoming ones.
 function loadMessages() {
+  // Loads the last 12 messages and listen for new ones.
+  var callback = function(snap) {
+    var data = snap.val();
+    displayMessage(snap.key, data.name, data.text, data.profilePicUrl, data.imageUrl);
+  };
+
+  firebase.database().ref('/messages/').limitToLast(12).on('child_added', callback);
+  firebase.database().ref('/messages/').limitToLast(12).on('child_changed', callback);
+
   // TODO 7: Load and listens for new messages.
 }
 
@@ -262,7 +255,13 @@ function checkSetup() {
 checkSetup();
 
 // Shortcuts to DOM Elements.
-
+var messageListElement = document.getElementById('messages');
+var messageFormElement = document.getElementById('message-form');
+var messageInputElement = document.getElementById('message');
+var submitButtonElement = document.getElementById('submit');
+var imageButtonElement = document.getElementById('submitImage');
+var imageFormElement = document.getElementById('image-form');
+var mediaCaptureElement = document.getElementById('mediaCapture');
 var userPicElement = document.getElementById('user-pic');
 var userNameElement = document.getElementById('user-name');
 var signInButtonElement = document.getElementById('sign-in');
