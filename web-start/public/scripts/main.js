@@ -234,11 +234,11 @@ function autorun(){
         //diff
         selectedType1 = $(".soflow1 option:selected").val();
         //Name
-        selectedType2 = $(".textfield").val();
+        selectedType2 = $("#textfield").val();
         //days
-        selectedType3 = $(".Daysleft").val();
+        selectedType3 = $("#Daysleft").val();
         //hours
-        selectedType4 = $(".HW").val();        
+        selectedType4 = $("#WH").val();        
 
         alert("Hiiii");
 
@@ -248,7 +248,7 @@ function autorun(){
             name: selectedType2,
             Type: selectedType,
             Daysleft: selectedType3,
-            HoursAvWork: selectedType4
+            HAW: selectedType4,
             }).catch(function(error) {
     console.error('Error writing new message to Firebase Database', error);
   });
