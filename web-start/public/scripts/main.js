@@ -16,6 +16,8 @@
 var selectedType;
 var selectedType1;
 var selectedType2;
+var selectedType3;
+var selectedType4;
 
 var script = document.createElement('script');
  
@@ -26,7 +28,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 // Set the configuration for your app
 // TODO: Replace with your project's config object
   // Get a reference to the database service
-  var database = firebase.database();
+var database = firebase.database();
 'use strict';
 
 //Gets input from the user about the assignment details
@@ -227,9 +229,16 @@ autorun();
 function autorun(){
   $(document).ready(function(){
     $("#submit").click(function(){
+        //type
         selectedType = $(".soflow option:selected").val();
+        //diff
         selectedType1 = $(".soflow1 option:selected").val();
+        //Name
         selectedType2 = $(".textfield").val();
+        //days
+        selectedType3 = $(".Daysleft").val();
+        //hours
+        selectedType4 = $(".HW").val();        
 
         alert("Hiiii");
 
@@ -238,8 +247,9 @@ function autorun(){
             difficulty: selectedType1,
             name: selectedType2,
             Type: selectedType,
-
-      }).catch(function(error) {
+            Daysleft: selectedType3,
+            HoursAvWork: selectedType4
+            }).catch(function(error) {
     console.error('Error writing new message to Firebase Database', error);
   });
   //TODO 2: Sign out of Firebase.
