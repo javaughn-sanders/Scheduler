@@ -308,8 +308,9 @@ initFirebaseAuth();
 loadMessages();
 
 $(document).ready(function(){
-    $("select.country").change(function(){
-        var selectedCountry = $(".country option:selected").val();
-        alert("You have selected the country - " + selectedCountry);
+    $("#button").click(function(){
+        var selectedType = $(".soflow option:selected").val();
+        var selectedType1 = $(".soflow1 option:selected").val();
+        alert("Hiiii" + selectedType);
     });
 });
