@@ -1,0 +1,204 @@
+[debug] [2018-10-20T19:08:01.360Z] ----------------------------------------------------------------------
+[debug] [2018-10-20T19:08:01.362Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javau\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only hosting
+[debug] [2018-10-20T19:08:01.363Z] CLI Version:   5.1.1
+[debug] [2018-10-20T19:08:01.363Z] Platform:      win32
+[debug] [2018-10-20T19:08:01.363Z] Node Version:  v8.12.0
+[debug] [2018-10-20T19:08:01.363Z] Time:          Sat Oct 20 2018 15:08:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-20T19:08:01.363Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-20T19:08:01.377Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-20T19:08:01.377Z] > authorizing via signed-in user
+[debug] [2018-10-20T19:08:01.378Z] [iam] checking project scheduler-hu for permissions ["firebase.projects.get"]
+[debug] [2018-10-20T19:08:01.379Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu:testIamPermissions  
+
+[debug] [2018-10-20T19:08:01.665Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T19:08:01.666Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu  
+ 
+[debug] [2018-10-20T19:08:01.882Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\javau\Documents\GitHub\friendlychat-web\web-start'...
+[info] 
+[debug] [2018-10-20T19:08:01.884Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-20T19:08:02.152Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-20T19:49:27.464Z] ----------------------------------------------------------------------
+[debug] [2018-10-20T19:49:27.467Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javau\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-20T19:49:27.467Z] CLI Version:   5.1.1
+[debug] [2018-10-20T19:49:27.467Z] Platform:      win32
+[debug] [2018-10-20T19:49:27.467Z] Node Version:  v8.12.0
+[debug] [2018-10-20T19:49:27.467Z] Time:          Sat Oct 20 2018 15:49:27 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-20T19:49:27.468Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-20T19:49:27.476Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-20T19:49:27.477Z] > authorizing via signed-in user
+[debug] [2018-10-20T19:49:27.477Z] [iam] checking project scheduler-hu for permissions ["firebase.projects.get"]
+[debug] [2018-10-20T19:49:27.479Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu:testIamPermissions  
+
+[debug] [2018-10-20T19:49:27.749Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T19:49:27.750Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu  
+ 
+[debug] [2018-10-20T19:49:27.956Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\javau\Documents\GitHub\Scheduler\web-start'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-20T19:49:28.687Z] Fetching environment
+[debug] [2018-10-20T19:49:28.690Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369:getServerAppConfig  
+ 
+[debug] [2018-10-20T19:49:28.690Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-20T19:49:28.909Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T19:49:28.910Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-20T19:49:28.996Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-20T19:49:30.943Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-10-20T22:59:20.175Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketOnEnd (_http_client.js:423:23)
+    at emitNone (events.js:111:20)
+    at TLSSocket.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:139:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:219:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T22:59:20.178Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:561:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:360:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T22:59:20.210Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketOnEnd (_http_client.js:423:23)
+    at emitNone (events.js:111:20)
+    at TLSSocket.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:139:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:219:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T22:59:20.212Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:561:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:360:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T23:00:00.059Z] ----------------------------------------------------------------------
+[debug] [2018-10-20T23:00:00.062Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javau\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-20T23:00:00.062Z] CLI Version:   5.1.1
+[debug] [2018-10-20T23:00:00.062Z] Platform:      win32
+[debug] [2018-10-20T23:00:00.062Z] Node Version:  v8.12.0
+[debug] [2018-10-20T23:00:00.063Z] Time:          Sat Oct 20 2018 19:00:00 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-20T23:00:00.063Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-20T23:00:00.074Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-20T23:00:00.075Z] > authorizing via signed-in user
+[debug] [2018-10-20T23:00:00.075Z] [iam] checking project scheduler-hu for permissions ["firebase.projects.get"]
+[debug] [2018-10-20T23:00:00.077Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-10-20T23:00:00.077Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2018-10-20T23:00:00.232Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T23:00:00.238Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu:testIamPermissions  
+
+[debug] [2018-10-20T23:00:00.802Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T23:00:00.803Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu  
+ 
+[debug] [2018-10-20T23:00:01.079Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\javau\Documents\GitHub\Scheduler\web-start'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-20T23:00:01.914Z] Fetching environment
+[debug] [2018-10-20T23:00:01.917Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369:getServerAppConfig  
+ 
+[debug] [2018-10-20T23:00:01.918Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-20T23:00:02.092Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T23:00:02.092Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-20T23:00:02.180Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-20T23:00:04.125Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
+[debug] [2018-10-20T23:04:53.962Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketOnEnd (_http_client.js:423:23)
+    at emitNone (events.js:111:20)
+    at TLSSocket.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:139:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:219:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T23:04:53.967Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:561:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:360:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T23:04:53.978Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketOnEnd (_http_client.js:423:23)
+    at emitNone (events.js:111:20)
+    at TLSSocket.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1064:12)
+    at _combinedTickCallback (internal/process/next_tick.js:139:11)
+    at process._tickDomainCallback (internal/process/next_tick.js:219:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T23:04:53.982Z] Error: socket hang up
+    at createHangUpError (_http_client.js:331:15)
+    at TLSSocket.socketCloseListener (_http_client.js:363:23)
+    at emitOne (events.js:121:20)
+    at TLSSocket.emit (events.js:211:7)
+    at _handle.close (net.js:561:12)
+    at TCP.done [as _onclose] (_tls_wrap.js:360:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2018-10-20T23:04:59.441Z] ----------------------------------------------------------------------
+[debug] [2018-10-20T23:04:59.443Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\javau\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-10-20T23:04:59.443Z] CLI Version:   5.1.1
+[debug] [2018-10-20T23:04:59.443Z] Platform:      win32
+[debug] [2018-10-20T23:04:59.443Z] Node Version:  v8.12.0
+[debug] [2018-10-20T23:04:59.444Z] Time:          Sat Oct 20 2018 19:04:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2018-10-20T23:04:59.444Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-20T23:04:59.456Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-20T23:04:59.457Z] > authorizing via signed-in user
+[debug] [2018-10-20T23:04:59.457Z] [iam] checking project scheduler-hu for permissions ["firebase.projects.get"]
+[debug] [2018-10-20T23:04:59.458Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu:testIamPermissions  
+
+[debug] [2018-10-20T23:04:59.808Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T23:04:59.809Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/scheduler-hu  
+ 
+[debug] [2018-10-20T23:05:00.022Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\javau\Documents\GitHub\Scheduler\web-start'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-10-20T23:05:00.828Z] Fetching environment
+[debug] [2018-10-20T23:05:00.830Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369:getServerAppConfig  
+ 
+[debug] [2018-10-20T23:05:00.831Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/221993862369/clients/_:getWebAppConfig  
+ 
+[debug] [2018-10-20T23:05:01.028Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-20T23:05:01.028Z] Starting @google-cloud/functions-emulator
+[debug] [2018-10-20T23:05:01.119Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2018-10-20T23:05:03.063Z] Parsing function triggers
+[info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.
