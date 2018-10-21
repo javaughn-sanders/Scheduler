@@ -71,9 +71,9 @@
         <button id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           <i class="material-icons">account_circle</i>Sign-in with Google
         </button>
-          </div>
-    </div>
+      </div>
   </div>
+</div>
 
 </header>
 
@@ -91,12 +91,13 @@
         <th>Hours to work today</th>
       </tr>
       <tr>
+      <form action="/action_page.php">
         <td>
-          <form action="/action_page.php">
+          
 
             <input type="text" name="name" value="Input here" class="textfield">
 
-          </form>
+          
         </td>
         <td>
           <select id="type" class="soflow">
@@ -114,24 +115,25 @@
           </select>
         </td>
         <td>
-          <form action="/action_page.php">
+         
 
-            <input type="text" name="daysleft" value="Input here" >
+            <input class="textfield" type="text" name="daysleft" value="Input here" >
 
-          </form>
+          
         </td>
         <td>
-          <form action="/action_page.php">
+    
 
             <input type="text" name="hoursToWork" value="Input here" class="textfield">
 
-          </form>
+          
         </td>
         <td>
           <button class="mdl-button mdl-js-button mdl-button--raised" type="button"  id="submit">
            Submit
         </button>
         </td>
+        </form>
       </tr>
 
     </table> 

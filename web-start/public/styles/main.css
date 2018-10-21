@@ -3,12 +3,14 @@
 }
 #work_container {
 text-align: center;
+padding-top: 120px;
 
 }
 
 #work {
-  display: inline-block;
-  padding-top: 120px;
+  display: block;
+  
+
 }
 
 table {
@@ -70,7 +72,10 @@ select.soflow1 {
    width: 300px;
 }
 
-input[type=text] {
+input.textfield[type=text] {
     border: none;
     border-bottom: 3px solid black;
+    z-index: 5;
+
+
 }
