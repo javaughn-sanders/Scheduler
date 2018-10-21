@@ -19,6 +19,12 @@ var selectedType2;
 var selectedType3;
 var selectedType4;
 
+
+  var type;
+  var HAW;
+  var daysLeft;
+  var difficulty;
+
 var script = document.createElement('script');
  
 script.src = '//code.jquery.com/jquery-1.11.0.min.js';
@@ -33,17 +39,24 @@ var database = firebase.database();
 
 //Gets input from the user about the assignment details
 function Get_User_Input(){
-  // link to html with id
-  //var type = document.getElementByID
-  //var difficulty = //id;
-  //var daysLeft = //id;
+  alert(data.type + "runing");
+  var data = snap.val();
+
+  type = data.type;
+  HAW = data.HAW;
+  daysLeft = data.daysLeft;
+  difficulty = data.difficulty
+
+  firebase.database().ref('/messages/').on('child_changed', callback);
+
+  
   return;
 }
 
 
 //Takes in variables from Get_User_Input
 var importance_values = [];
-function calculateImportance(Get_User_Input){
+function calculateImportance(type, difficulty, daysLeft){
   var importance_value = (type + difficulty) / daysLeft;
   importance_values.push(importance_value);
   return importance_value;
@@ -80,6 +93,10 @@ function submit() {
   // });
   // //TODO 2: Sign out of Firebase.
   // alert("ok" + elementVal);
+}
+
+function todo(){
+  
 }
 
 // Initiate firebase auth.
@@ -248,8 +265,16 @@ function autorun(){
         //hours
         selectedType4 = $("#WH").val();        
 
-        alert("Hiiii");
 
+
+            s0 = parseInt(selectedType, 10);
+            s1 = parseInt(selectedType1, 10);
+            s3 = parseInt(selectedType3, 10);
+
+            var temp = calculateImportance( s0, s1, s3);
+            alert(temp + " : this is temp");
+
+            calculateTimeSpent(temp, selectedType4);
 
             return firebase.database().ref('/assignment/').push({
             difficulty: selectedType1,
@@ -259,9 +284,11 @@ function autorun(){
             HAW: selectedType4,
             }).catch(function(error) {
     console.error('Error writing new message to Firebase Database', error);
+
+
   });
   //TODO 2: Sign out of Firebase.
-  alert("ok" + elementVal);
+
     });
 });
 
