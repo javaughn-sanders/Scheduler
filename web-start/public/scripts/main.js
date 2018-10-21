@@ -14,6 +14,11 @@
  * limitations under the License.
  */
 
+var script = document.createElement('script');
+ 
+script.src = '//code.jquery.com/jquery-1.11.0.min.js';
+document.getElementsByTagName('head')[0].appendChild(script); 
+
 
 // Set the configuration for your app
 // TODO: Replace with your project's config object
@@ -178,6 +183,8 @@ var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
+var signedIn = document.getElementById('typechoice');
+
 // Saves message on form submit.
 
 signOutButtonElement.addEventListener('click', signOut);
@@ -190,13 +197,17 @@ signInButtonElement.addEventListener('click', signIn);
 
 // initialize Firebase
 initFirebaseAuth();
+alert("" + signedIn);
+autorun();
 
 // We load currently existing chat messages and listen to new ones.
-
-$(document).ready(function(){
-    $("#button").click(function(){
-        var selectedType = $(".soflow option:selected").val();
-        var selectedType1 = $(".soflow1 option:selected").val();
-        alert("Hiiii" + selectedType);
+function autorun(){
+  $(document).ready(function(){
+    $("#button123").click(function(){
+        // var selectedType = $(".soflow option:selected").val();
+        // var selectedType1 = $(".soflow1 option:selected").val();
+        alert("Hiiii");
     });
 });
+
+}
