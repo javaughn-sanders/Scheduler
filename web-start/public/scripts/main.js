@@ -38,7 +38,6 @@ function Get_User_Input(){
   return;
 }
 
-
 //Takes in variables from Get_User_Input
 function calculateImportance(type, difficulty, daysLeft){
   Get_User_Input();
@@ -59,6 +58,7 @@ function signOut() {
   // TODO 2: Sign out of Firebase.
 }
 
+<<<<<<< HEAD
 function submit() {
 /*  alert(""+selectedType + selectedType1)
     return firebase.database().ref('/assignment/').push({
@@ -73,6 +73,8 @@ function submit() {
   alert("ok" + elementVal);*/
 }
 
+=======
+>>>>>>> b0586329c2099bba334d16fd1115f988f03f9407
 // Initiate firebase auth.
 function initFirebaseAuth() {
   firebase.auth().onAuthStateChanged(authStateObserver);
@@ -201,18 +203,14 @@ var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
+var signedIn = document.getElementById('typechoice');
 
-var submitelements = document.getElementById('submit');
-
-var elementVal = document.getElementById('elementID');
 // Saves message on form submit.
 
 
 
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
-
-submitelements.addEventListener('click', submit);
 
 // Toggle for the button.
 
@@ -233,15 +231,15 @@ function autorun(){
         selectedType1 = $(".soflow1 option:selected").val();
         alert("Hiiii" + selectedType + selectedType1);
 
-  alert(""+selectedType + selectedType1)
-    return firebase.database().ref('/assignment/').push({
-    difficulty: selectedType,
+        alert(""+selectedType + selectedType1)
+        return firebase.database().ref('/assignment/').push({
+        difficulty: selectedType,
 
-    name: selectedType1,
+        name: selectedType1,
 
-  }).catch(function(error) {
-    console.error('Error writing new message to Firebase Database', error);
-  });
+        }).catch(function(error) {
+        console.error('Error writing new message to Firebase Database', error);
+        });
   //TODO 2: Sign out of Firebase.
   alert("ok" + elementVal);
     });
