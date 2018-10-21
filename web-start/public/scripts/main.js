@@ -35,6 +35,7 @@ function Get_User_Input(){
   return;
 }
 
+
 //Takes in variables from Get_User_Input
 function calculateImportance(type, difficulty, daysLeft){
   Get_User_Input();
@@ -53,6 +54,19 @@ function signIn() {
 function signOut() {
    firebase.auth().signOut();
   // TODO 2: Sign out of Firebase.
+}
+
+function submit() {
+    return firebase.database().ref('/assignment/').push({
+    difficulty: elementVal,
+
+    name: elementVal,
+
+  }).catch(function(error) {
+    console.error('Error writing new message to Firebase Database', error);
+  });
+  //TODO 2: Sign out of Firebase.
+  alert("ok" + elementVal);
 }
 
 // Initiate firebase auth.
@@ -183,12 +197,16 @@ var signInButtonElement = document.getElementById('sign-in');
 var signOutButtonElement = document.getElementById('sign-out');
 var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 
-var signedIn = document.getElementById('typechoice');
 
+var submitelements = document.getElementById('submit');
+
+var elementVal = document.getElementById('elementID');
 // Saves message on form submit.
 
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
+
+submitelements.addEventListener('click', submit);
 
 // Toggle for the button.
 
@@ -197,15 +215,15 @@ signInButtonElement.addEventListener('click', signIn);
 
 // initialize Firebase
 initFirebaseAuth();
-alert("" + signedIn);
-autorun();
+alert("" + submitelements);
+
 
 // We load currently existing chat messages and listen to new ones.
 function autorun(){
   $(document).ready(function(){
-    $("#button123").click(function(){
-        // var selectedType = $(".soflow option:selected").val();
-        // var selectedType1 = $(".soflow1 option:selected").val();
+    $("#submit").click(function(){
+        var selectedType = $(".soflow option:selected").val();
+        var selectedType1 = $(".soflow1 option:selected").val();
         alert("Hiiii");
     });
 });
