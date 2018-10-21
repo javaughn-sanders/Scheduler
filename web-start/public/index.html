@@ -84,11 +84,20 @@
 
     <table class="Table">
       <tr>
-        <th>Types Of work</th>
+        <th>Name</th>
+        <th>Type of work</th>
         <th>Difficulty</th>
-        <th>Days till complete</th>
+        <th>Days till Due</th>
+        <th>Hours to work today</th>
       </tr>
       <tr>
+        <td>
+          <form action="/action_page.php">
+
+            <input type="text" name="name" value="Input here" class="textfield">
+
+          </form>
+        </td>
         <td>
           <select id="type" class="soflow">
             <option value="4">Test</option>
@@ -97,7 +106,7 @@
             <option value="1">reading</option>
             </select></td>
         <td>
-          <select id="difficulty" class="soflow">
+          <select id="difficulty" class="soflow1">
             <option value="0">easy</option>
             <option value="1">average</option>
             <option value="2">difficult</option>
@@ -107,7 +116,14 @@
         <td>
           <form action="/action_page.php">
 
-            <input type="text" name="daysleft" value="Input here" class="textfield">
+            <input type="text" name="daysleft" value="Input here" >
+
+          </form>
+        </td>
+        <td>
+          <form action="/action_page.php">
+
+            <input type="text" name="hoursToWork" value="Input here" class="textfield">
 
           </form>
         </td>
