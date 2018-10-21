@@ -1,5 +1,7 @@
 {
   "projects": {
-    "prod": "scheduler-hu"
+    "prod": "scheduler-hu",
+    "Scheduler": "scheduler-hu",
+    "default": "scheduler-hu"
   }
 }
