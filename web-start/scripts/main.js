@@ -306,3 +306,17 @@ initFirebaseAuth();
 
 // We load currently existing chat messages and listen to new ones.
 loadMessages();
+
+
+$(function(){
+    $("#select.MainTable").click(function(){
+      $(".country option:selected").val();
+
+
+        // var Test = $(this).find("td:eq(0) input[type='text']").val();
+        // var Essay_and_projects = $(this).find("td:eq(1) input[type='text']").val();
+        // var assignments = $(this).find("td:eq(1) input[type='text']").val();
+        // var reading = $(this).find("td:eq(1) input[type='text']").val();
+    });
+});
+
