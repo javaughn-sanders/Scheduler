@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+var selectedType1;
+var selectedType;
+
 var script = document.createElement('script');
  
 script.src = '//code.jquery.com/jquery-1.11.0.min.js';
@@ -57,16 +60,17 @@ function signOut() {
 }
 
 function submit() {
+/*  alert(""+selectedType + selectedType1)
     return firebase.database().ref('/assignment/').push({
-    difficulty: elementVal,
+    difficulty: selectedType,
 
-    name: elementVal,
+    name: selectedType1,
 
   }).catch(function(error) {
     console.error('Error writing new message to Firebase Database', error);
   });
   //TODO 2: Sign out of Firebase.
-  alert("ok" + elementVal);
+  alert("ok" + elementVal);*/
 }
 
 // Initiate firebase auth.
@@ -203,6 +207,8 @@ var submitelements = document.getElementById('submit');
 var elementVal = document.getElementById('elementID');
 // Saves message on form submit.
 
+
+
 signOutButtonElement.addEventListener('click', signOut);
 signInButtonElement.addEventListener('click', signIn);
 
@@ -216,16 +222,31 @@ submitelements.addEventListener('click', submit);
 // initialize Firebase
 initFirebaseAuth();
 alert("" + submitelements);
+autorun();
 
 
 // We load currently existing chat messages and listen to new ones.
 function autorun(){
   $(document).ready(function(){
     $("#submit").click(function(){
-        var selectedType = $(".soflow option:selected").val();
-        var selectedType1 = $(".soflow1 option:selected").val();
-        alert("Hiiii");
+        selectedType = $(".soflow option:selected").val();
+        selectedType1 = $(".soflow1 option:selected").val();
+        alert("Hiiii" + selectedType + selectedType1);
+
+  alert(""+selectedType + selectedType1)
+    return firebase.database().ref('/assignment/').push({
+    difficulty: selectedType,
+
+    name: selectedType1,
+
+  }).catch(function(error) {
+    console.error('Error writing new message to Firebase Database', error);
+  });
+  //TODO 2: Sign out of Firebase.
+  alert("ok" + elementVal);
     });
 });
+
+
 
 }
