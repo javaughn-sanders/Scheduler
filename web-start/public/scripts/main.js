@@ -67,7 +67,8 @@ function calculateTimeSpent(importance, freeTime){
   for (var i = 0; i < importance_values.length; i++) {
     total_importance += importance_values[i];
   }
-  return (importance/total_importance)*freeTime*100;
+  var timeSpent = (importance/total_importance)*freeTime*100;
+  return timeSpent;
 }
 // Signs-in Friendly Chat.
 function signIn() {
@@ -95,8 +96,16 @@ function submit() {
   // alert("ok" + elementVal);
 }
 
-function todo(){
+function todo(calcTime, name){
   
+  var orderToPrint = [];
+  for (var i = 0; i < importance_values.length; i++) {
+    orderToPrint.push(importance_values[i]);
+    orderToPrint.sort(function(a, b){return a-b});
+    document.write('<ul><li>' + name + '</li></ul>');
+  }
+  
+  //document.write('<ul><li>' + orderToPrint.join("</li><li>") + '</li></ul>');  
 }
 
 // Initiate firebase auth.
@@ -113,10 +122,6 @@ function getProfilePicUrl() {
 
 // Returns the signed-in user's display name.
 function getUserName() {
-
-  return firebase.auth().currentUser.displayName;
-
-  return firebase.auth().currentUser.photoURL || '/images/profile_placeholder.png';
 
   return firebase.auth().currentUser.displayName;
 
@@ -275,7 +280,10 @@ function autorun(){
             alert(temp + " : this is temp");
 
             calculateTimeSpent(temp, selectedType4);
-
+            
+            var calcTime = calculateTimeSpent(temp, selectedType4);
+            todo(calcTime, selectedType2);
+            
             return firebase.database().ref('/assignment/').push({
             difficulty: selectedType1,
             name: selectedType2,
