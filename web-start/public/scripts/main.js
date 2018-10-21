@@ -59,6 +59,7 @@ function signOut() {
   // TODO 2: Sign out of Firebase.
 }
 
+<<<<<<< HEAD
 function submit() {
 /*  alert(""+selectedType + selectedType1)
     return firebase.database().ref('/assignment/').push({
@@ -73,6 +74,11 @@ function submit() {
   alert("ok" + elementVal);*/
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b0586329c2099bba334d16fd1115f988f03f9407
+>>>>>>> 659094331016d7e3d7173907d50ff70bcd1f512a
 // Initiate firebase auth.
 function initFirebaseAuth() {
   firebase.auth().onAuthStateChanged(authStateObserver);
