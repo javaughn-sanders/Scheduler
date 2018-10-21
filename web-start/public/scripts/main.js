@@ -96,7 +96,7 @@ function submit() {
   // alert("ok" + elementVal);
 }
 
-function todo(calcTime, name){
+/*function todo(calcTime, name){
   
   var orderToPrint = [];
   for (var i = 0; i < importance_values.length; i++) {
@@ -104,7 +104,7 @@ function todo(calcTime, name){
     orderToPrint.sort(function(a, b){return a-b});
     document.write('<ul><li>' + name + '</li></ul>');
   }
-  
+  */
   //document.write('<ul><li>' + orderToPrint.join("</li><li>") + '</li></ul>');  
 }
 
