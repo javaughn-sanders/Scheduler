@@ -17,7 +17,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Learn how to use the Firebase platform on the Web">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friendly Chat</title>
+  <title>Scheduler</title>
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -56,21 +56,28 @@
   <header class="mdl-layout__header mdl-color-text--white mdl-color--blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-        <h3><i class="material-icons">calendar_today</i> Scheduler</h3>
+        <h3 style="float: left; display: block; width: 85%">
+        <i class="material-icons">calendar_today</i> Scheduler
+        </h3>
+        
+          <div hidden id="user-pic">
+            
+          </div>
 
-      </div>
-      <div id="user-container">
-        <div hidden id="user-pic"></div>
+          <div id="user-container" style="float: right; display: block;">
         
         <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           Sign-out
         </button>
+    
         <button id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white">
           <i class="material-icons">account_circle</i>Sign-in with Google
         </button>
-      </div>
+          </div>
     </div>
-  </header>
+  </div>
+
+</header>
 
 
 
@@ -85,22 +92,22 @@
       </tr>
       <tr>
         <td>
-          <select class="soflow">
+          <select id="type" class="soflow">
             <option value="4">Test</option>
             <option value="3">Essay/projects</option>
             <option value="2">assignments</option>
             <option value="1">reading</option>
             </select></td>
         <td>
-          <select class="soflow">
-            <option value="easy">easy</option>
-            <option value="avarage">average</option>
-            <option value="diff">difficult</option>
+          <select id="difficulty" class="soflow">
+            <option value="0">easy</option>
+            <option value="1">average</option>
+            <option value="2">difficult</option>
           </select>
         </td>
         <td>
           <form action="/action_page.php">
-            <input type="text" name="daysleft" value="Input here">
+            <input id= "daysleft" type="text" name="daysleft" value="Input here">
           </form>
         </td>
         <td>
