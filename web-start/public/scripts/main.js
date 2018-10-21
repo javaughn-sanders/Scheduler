@@ -42,12 +42,20 @@ function Get_User_Input(){
 
 
 //Takes in variables from Get_User_Input
-function calculateImportance(type, difficulty, daysLeft){
-  Get_User_Input();
-  var importance_value = (type + difficulty) / daysLeft; 
+var importance_values = [];
+function calculateImportance(Get_User_Input){
+  var importance_value = (type + difficulty) / daysLeft;
+  importance_values.push(importance_value);
   return importance_value;
 }
 
+function calculateTimeSpent(importance, freeTime){
+  var total_importance = 0;
+  for (var i = 0; i < importance_values.length; i++) {
+    total_importance += importance_values[i];
+  }
+  return (importance/total_importance)*freeTime*100;
+}
 // Signs-in Friendly Chat.
 function signIn() {
   // Sign in Firebase using popup auth and Google as the identity provider.
