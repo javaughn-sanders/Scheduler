@@ -15,6 +15,7 @@
  */
 var selectedType;
 var selectedType1;
+var selectedType2;
 
 var script = document.createElement('script');
  
@@ -203,6 +204,8 @@ var signInSnackbarElement = document.getElementById('must-signin-snackbar');
 var submitelements = document.getElementById('submit');
 
 var elementVal = document.getElementById('elementID');
+
+var nameProd =  document.getElementById('textfield');
 // Saves message on form submit.
 
 signOutButtonElement.addEventListener('click', signOut);
@@ -224,18 +227,19 @@ autorun();
 function autorun(){
   $(document).ready(function(){
     $("#submit").click(function(){
-        var selectedType = $(".soflow option:selected").val();
-        var selectedType1 = $(".soflow1 option:selected").val();
-        
+        selectedType = $(".soflow option:selected").val();
+        selectedType1 = $(".soflow1 option:selected").val();
+        selectedType2 = $(".textfield").val();
+
         alert("Hiiii");
 
 
             return firebase.database().ref('/assignment/').push({
-    difficulty: selectedType1,
+            difficulty: selectedType1,
+            name: selectedType2,
+            Type: selectedType,
 
-    name: selectedType,
-
-  }).catch(function(error) {
+      }).catch(function(error) {
     console.error('Error writing new message to Firebase Database', error);
   });
   //TODO 2: Sign out of Firebase.
