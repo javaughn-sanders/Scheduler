@@ -13,6 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+var selectedType;
+var selectedType1;
 
 var script = document.createElement('script');
  
@@ -56,25 +58,19 @@ function signOut() {
   // TODO 2: Sign out of Firebase.
 }
 
-<<<<<<< HEAD
 function submit() {
-    return firebase.database().ref('/assignment/').push({
-    difficulty: elementVal,
+  //   return firebase.database().ref('/assignment/').push({
+  //   difficulty: elementVal,
 
-    name: elementVal,
+  //   name: elementVal,
 
-  }).catch(function(error) {
-    console.error('Error writing new message to Firebase Database', error);
-  });
-  //TODO 2: Sign out of Firebase.
-  alert("ok" + elementVal);
+  // }).catch(function(error) {
+  //   console.error('Error writing new message to Firebase Database', error);
+  // });
+  // //TODO 2: Sign out of Firebase.
+  // alert("ok" + elementVal);
 }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b0586329c2099bba334d16fd1115f988f03f9407
->>>>>>> 659094331016d7e3d7173907d50ff70bcd1f512a
 // Initiate firebase auth.
 function initFirebaseAuth() {
   firebase.auth().onAuthStateChanged(authStateObserver);
@@ -222,7 +218,7 @@ submitelements.addEventListener('click', submit);
 // initialize Firebase
 initFirebaseAuth();
 alert("" + submitelements);
-
+autorun();
 
 // We load currently existing chat messages and listen to new ones.
 function autorun(){
@@ -231,6 +227,18 @@ function autorun(){
         var selectedType = $(".soflow option:selected").val();
         var selectedType1 = $(".soflow1 option:selected").val();
         alert("Hiiii");
+
+
+            return firebase.database().ref('/assignment/').push({
+    difficulty: selectedType1,
+
+    name: selectedType,
+
+  }).catch(function(error) {
+    console.error('Error writing new message to Firebase Database', error);
+  });
+  //TODO 2: Sign out of Firebase.
+  alert("ok" + elementVal);
     });
 });
 
