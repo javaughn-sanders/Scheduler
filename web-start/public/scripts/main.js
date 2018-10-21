@@ -226,6 +226,7 @@ function autorun(){
     $("#submit").click(function(){
         var selectedType = $(".soflow option:selected").val();
         var selectedType1 = $(".soflow1 option:selected").val();
+        
         alert("Hiiii");
 
 
